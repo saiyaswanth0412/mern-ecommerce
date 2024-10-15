@@ -24,7 +24,8 @@ connectToDB()
 
 
 // middlewares
-server.use(cors())
+server.use(cors({ origin: 'https://mern-ecommerce-sw7t.vercel.app' }));
+
 server.use(express.json())
 server.use(cookieParser())
 server.use(morgan("tiny"))
