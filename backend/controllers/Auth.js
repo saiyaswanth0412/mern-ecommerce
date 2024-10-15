@@ -17,7 +17,7 @@ exports.signup=async(req,res)=>{
         }
 
         // hashing the password
-        const hashedPassword=await bcrypt.hash(req.body.password,10)
+        const hashedPassword=req.body.password;
         req.body.password=hashedPassword
 
         // creating new user
@@ -48,11 +48,12 @@ exports.signup=async(req,res)=>{
 
 exports.login=async(req,res)=>{
     try {
+        // const allUsers=await User.findAll({});
         // checking if user exists or not
         const existingUser=await User.findOne({email:req.body.email})
 
         // if exists and password matches the hash
-        if(existingUser && (await bcrypt.compare(req.body.password,existingUser.password))){
+        if(existingUser &&req.body.password === existingUser.password){
 
             // getting secure user info
             const secureInfo=sanitizeUser(existingUser)
