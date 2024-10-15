@@ -25,7 +25,11 @@ server.timeout = 120000; // 120 seconds
 
 
 // middlewares
-server.use(cors());
+server.use(cors({
+    origin: '*',  // Allows all origins (you can restrict this in production)
+    credentials: true // Allows cookies and credentials to be sent
+}));
+
 
 server.use(express.json())
 server.use(cookieParser())
