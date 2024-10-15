@@ -21,12 +21,11 @@ const server=express()
 
 // database connection
 connectToDB()
+server.timeout = 120000; // 120 seconds
 
 
 // middlewares
-server.use(cors({ origin: 'https://mern-ecommerce-sw7t.vercel.app',
-    credentials: true 
- }));
+server.use(cors());
 
 server.use(express.json())
 server.use(cookieParser())
