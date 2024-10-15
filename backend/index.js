@@ -23,6 +23,7 @@ connectToDB();
 // server.timeout = 120000; // 120 seconds
 
 server.use(cors({origin:process.env.ORIGIN,credentials:true,exposedHeaders:['X-Total-Count'],methods:['GET','POST','PATCH','DELETE']}))
+console.log('Allowed Origin:', process.env.ORIGIN);
 
 server.use(express.json());
 server.use(cookieParser());
