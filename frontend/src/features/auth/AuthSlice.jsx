@@ -24,40 +24,40 @@ const initialState={
     isAuthChecked:false
 }
 
-export const signupAsync=createAsyncThunk('http://localhost:8000/auth/signupAsync',async(cred)=>{
+export const signupAsync=createAsyncThunk('auth/signupAsync',async(cred)=>{
     const res=await signup(cred)
     return res
 })
 
-export const loginAsync=createAsyncThunk('http://localhost:8000/auth/loginAsync',async(cred)=>{
+export const loginAsync=createAsyncThunk('auth/loginAsync',async(cred)=>{
     const res=await login(cred)
     return res
 })
 
-export const verifyOtpAsync=createAsyncThunk('http://localhost:8000/auth/verifyOtpAsync',async(cred)=>{
+export const verifyOtpAsync=createAsyncThunk('auth/verifyOtpAsync',async(cred)=>{
     const res=await verifyOtp(cred)
     return res
 })
-export const resendOtpAsync=createAsyncThunk("http://localhost:8000/auth/resendOtpAsync",async(cred)=>{
+export const resendOtpAsync=createAsyncThunk("auth/resendOtpAsync",async(cred)=>{
     const res=await resendOtp(cred)
     return res
 })
-export const forgotPasswordAsync=createAsyncThunk('http://localhost:8000/auth/forgotPasswordAsync',async(cred)=>{
+export const forgotPasswordAsync=createAsyncThunk('auth/forgotPasswordAsync',async(cred)=>{
     const res=await forgotPassword(cred)
     return res
 })
 
-export const resetPasswordAsync=createAsyncThunk('http://localhost:8000/auth/resetPasswordAsync',async(cred)=>{
+export const resetPasswordAsync=createAsyncThunk('auth/resetPasswordAsync',async(cred)=>{
     const res=await resetPassword(cred)
     return res
 })
 
-export const checkAuthAsync=createAsyncThunk('http://localhost:8000/auth/checkAuthAsync',async()=>{
+export const checkAuthAsync=createAsyncThunk('auth/checkAuthAsync',async()=>{
     const res=await checkAuth()
     return res
 })
 
-export const logoutAsync=createAsyncThunk("http://localhost:8000/auth/logoutAsync",async()=>{
+export const logoutAsync=createAsyncThunk("auth/logoutAsync",async()=>{
     const res=await logout()
     return res
 })
