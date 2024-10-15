@@ -23,12 +23,12 @@ const server=express()
 connectToDB()
 server.timeout = 120000; // 120 seconds
 
-
+const corsConfig = {
+    credentials: true,
+    origin: true,
+};
 // middlewares
-server.use(cors({
-    origin: '*',  // Allows all origins (you can restrict this in production)
-    credentials: true // Allows cookies and credentials to be sent
-}));
+server.use(cors(corsConfig));
 
 
 server.use(express.json())
