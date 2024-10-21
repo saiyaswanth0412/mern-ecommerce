@@ -70,10 +70,15 @@ export const Login = () => {
         <Stack flex={1} justifyContent={'center'} alignItems={'center'}>
 
               <Stack flexDirection={'row'} justifyContent={'center'} alignItems={'center'}>
-
+              <img 
+      src="https://res.cloudinary.com/djbpywyws/image/upload/v1729542212/qtqzhy0wdf3g7iamu0hb.png" 
+      alt="ShopLane logo"
+      style={{ width: '100px', height: 'auto', marginLeft: '1rem' }}
+    />
                 <Stack rowGap={'.4rem'}>
                   <Typography variant='h2' sx={{wordBreak:"break-word"}} fontWeight={600}>ShopLane</Typography>
                   <Typography alignSelf={'flex-end'} color={'GrayText'} variant='body2'>- Shop Anything</Typography>
+  
                 </Stack>
 
               </Stack>

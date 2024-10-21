@@ -77,7 +77,11 @@ export const Signup = () => {
                     <Typography variant='h2' sx={{wordBreak:"break-word"}} fontWeight={600}>ShopLane</Typography>
                     <Typography alignSelf={'flex-end'} color={'GrayText'} variant='body2'>- Shop Anything</Typography>
                   </Stack>
-
+                  <img 
+      src="https://res.cloudinary.com/djbpywyws/image/upload/v1729542212/qtqzhy0wdf3g7iamu0hb.png" 
+      alt="ShopLane logo"
+      style={{ width: '100px', height: 'auto', marginLeft: '1rem' }}
+    />
               </Stack>
 
                 <Stack mt={4} spacing={2} width={is480?"95vw":'28rem'} component={'form'} noValidate onSubmit={handleSubmit(handleSignup)}>
